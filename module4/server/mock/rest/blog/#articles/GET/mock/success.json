@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "tag": "MINIMALISM",
+    "title": "Culpa sit Laboris Exercitation ea Fugiat",
+    "author": "Leslie Pena",
+    "createdAt": 982741763,
+    "image": "https://on.od.ua/wp-content/uploads/2021/02/600px-KanasJubigiAsparukh2-Cropped.jpg",
+    "readTime": 600,
+    "description": "Incididunt occaecat et qui dolore consectetur magna. Lorem veniam ut et labore consequat ut ex sunt. Ut et nostrud aliquip do anim proident ad nulla consectetur eu aute ex anim mollit. Anim aute exercitation nisi fugiat. Dolor velit excepteur commodo proident nulla commodo ullamco labore et esse."
+  },
+  {
+    "id": 1,
+    "tag": "TECHNOLOGY",
+    "title": "Amet non Ex Officia nulla Cupidatat",
+    "author": "Jacob Henry",
+    "createdAt": 1108972163,
+    "image": "",
+    "readTime": 1200,
+    "description": "Sint anim Lorem aute duis Lorem incididunt. Nulla nostrud irure id ipsum aute excepteur duis sint. Do occaecat sit dolor magna esse. Mollit incididunt cillum consectetur fugiat adipisicing dolor est id minim amet cillum esse Lorem. Deserunt non duis excepteur aliqua duis eu reprehenderit."
+  },
+  {
+    "id": 2,
+    "tag": "ARTICLE",
+    "title": "Culpa sit Laboris Exercitation ea Fugiat",
+    "author": "Leslie Pena",
+    "createdAt": 1435142963,
+    "image": "",
+    "readTime": 240,
+    "description": "Incididunt sint nulla eu adipisicing eu reprehenderit proident consequat est. Nisi consectetur incididunt mollit officia ut cupidatat laborum proident eu velit Lorem deserunt deserunt voluptate. Proident nostrud laborum reprehenderit culpa irure id labore do ad do minim nisi. Incididunt ex."
+  },
+]

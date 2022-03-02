@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "node ./mock/index.js"
+  },
+  "dependencies": {
+    "node-mock-server": "^0.25.4"
+  }
+}
