@@ -1,0 +1,19 @@
+{
+  "name": "module5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "boom": "^7.3.0",
+    "fastify": "^3.27.2",
+    "fastify-swagger": "^4.17.0",
+    "mongoose": "^6.2.4",
+    "nodemon": "^2.0.15"
+  }
+}
