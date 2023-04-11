@@ -6,7 +6,7 @@ import { Base, BaseSchema } from '../../schemas/base.schema';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost/module5'),
+    MongooseModule.forRoot('mongodb://localhost/module5?authSource=admin'),
     MongooseModule.forFeature([{ name: Base.name, schema: BaseSchema }]),
   ],
   controllers: [AppController],
