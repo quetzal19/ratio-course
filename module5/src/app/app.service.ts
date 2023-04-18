@@ -1,8 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { faker } from '@faker-js/faker';
 import { Base, BaseDocument } from '../../schemas/base.schema';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
+import mongoose, { Model } from 'mongoose';
 
 const latestProjection = {
   image: 1,
@@ -116,7 +116,11 @@ export class AppService {
   }
 
   async getById(id) {
-    return this.baseModel.findOne({ _id: id });
+    if (mongoose.Types.ObjectId.isValid(id)) {
+      return this.baseModel.findOne({ _id: id });
+    } else {
+      return new HttpException('Невернный формат', HttpStatus.NOT_FOUND);
+    }
   }
 
   async getLatest() {
