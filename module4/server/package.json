@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "node ./mock/index.js"
+    "start": "node ./mock/index.js",
+    "deploy": "pm2 del module4 || true && yarn --frozen-lockfile && pm2 start"
   },
   "dependencies": {
     "node-mock-server": "^0.25.4"

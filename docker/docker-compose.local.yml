@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  vue-academy-module4:
+    container_name: vue-academy-module4
+    build:
+      context: ../module4/server
+      dockerfile: ../../docker/Dockerfile
+      args:
+        GID: ${GID}
+        UID: ${UID}
+        PORT: ${PORT}
+        NODE_ENV: ${NODE_ENV}
+    environment:
+      NODE_ENV: ${NODE_ENV}
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - ../module4/server:/var/www/backend
+    networks:
+      - vue-academy
+
+networks:
+  vue-academy:
+    driver: bridge
