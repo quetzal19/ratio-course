@@ -20,6 +20,25 @@ services:
       vue-academy:
         ipv4_address: 172.24.210.2
 
+  vue-academy-module5:
+    container_name: vue-academy-module5
+    build:
+      context: ../module5
+      dockerfile: ../docker/Dockerfile
+      args:
+        GID: ${GID}
+        UID: ${UID}
+        PORT: ${PORT}
+        NODE_ENV: ${NODE_ENV}
+    restart: unless-stopped
+    environment:
+      NODE_ENV: ${NODE_ENV}
+    volumes:
+      - ../module5:/var/www/backend
+    networks:
+      vue-academy:
+        ipv4_address: 172.24.210.3
+
 networks:
   vue-academy:
     external: true
