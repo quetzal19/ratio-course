@@ -9,7 +9,7 @@ services:
       args:
         GID: ${GID}
         UID: ${UID}
-        PORT: ${PORT}
+        PORT: 10000
         NODE_ENV: ${NODE_ENV}
     restart: unless-stopped
     environment:
@@ -28,7 +28,7 @@ services:
       args:
         GID: ${GID}
         UID: ${UID}
-        PORT: ${PORT}
+        PORT: 10000
         NODE_ENV: ${NODE_ENV}
     restart: unless-stopped
     environment:

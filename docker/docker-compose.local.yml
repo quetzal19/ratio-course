@@ -9,12 +9,12 @@ services:
       args:
         GID: ${GID}
         UID: ${UID}
-        PORT: ${PORT}
+        PORT: 10000
         NODE_ENV: ${NODE_ENV}
     environment:
       NODE_ENV: ${NODE_ENV}
     ports:
-      - "10001:10000"
+      - "10000:10000"
     volumes:
       - ../module4/server:/var/www/backend
     networks:
@@ -28,14 +28,14 @@ services:
       args:
         GID: ${GID}
         UID: ${UID}
-        PORT: 10000
+        PORT: 3000
         NODE_ENV: ${NODE_ENV}
     environment:
       NODE_ENV: ${NODE_ENV}
     ports:
-      - "10000:10000"
+      - "3000:3000"
     volumes:
-      - ../module4/server:/var/www/backend
+      - ../module5:/var/www/backend
     networks:
       - vue-academy
 
