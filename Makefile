@@ -36,5 +36,5 @@ rb-module5: ## Пересобрать контейнер module5
 bash-module4: ## Зайти в bash контейнера с module4
 	docker compose -f docker/docker-compose.$(ENV).yml exec $(PREFIX)-module4 /bin/bash
 
-bash-module4: ## Зайти в bash контейнера с module5
+bash-module5: ## Зайти в bash контейнера с module5
 	docker compose -f docker/docker-compose.$(ENV).yml exec $(PREFIX)-module5 /bin/bash
