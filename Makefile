@@ -28,5 +28,13 @@ rb-module4: ## Пересобрать контейнер module4
 	@docker compose -f docker/docker-compose.$(ENV).yml down
 	@docker compose -f docker/docker-compose.$(ENV).yml up -d
 
+rb-module5: ## Пересобрать контейнер module5
+	@docker compose -f docker/docker-compose.$(ENV).yml up -d --build $(PREFIX)-module5
+	@docker compose -f docker/docker-compose.$(ENV).yml down
+	@docker compose -f docker/docker-compose.$(ENV).yml up -d
+
 bash-module4: ## Зайти в bash контейнера с module4
 	docker compose -f docker/docker-compose.$(ENV).yml exec $(PREFIX)-module4 /bin/bash
+
+bash-module4: ## Зайти в bash контейнера с module5
+	docker compose -f docker/docker-compose.$(ENV).yml exec $(PREFIX)-module5 /bin/bash
