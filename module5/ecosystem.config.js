@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'module5',
       script: 'npm',
-      args: 'start:prod',
+      args: 'start',
     },
   ],
 };
