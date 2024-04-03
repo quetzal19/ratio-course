@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  vue-academy-module4:
+    container_name: vue-academy-module4
+    build:
+      context: ../module4/server
+      dockerfile: ../../docker/Dockerfile
+      args:
+        GID: ${GID}
+        UID: ${UID}
+        PORT: 10000
+        NODE_ENV: ${NODE_ENV}
+    environment:
+      NODE_ENV: ${NODE_ENV}
+    ports:
+      - "10000:10000"
+    volumes:
+      - ../module4/server:/var/www/backend
+    networks:
+      - vue-academy
+
+  vue-academy-module5:
+    container_name: vue-academy-module5
+    build:
+      context: ../module5
+      dockerfile: ../docker/Dockerfile
+      args:
+        GID: ${GID}
+        UID: ${UID}
+        PORT: 3000
+        NODE_ENV: ${NODE_ENV}
+    environment:
+      NODE_ENV: ${NODE_ENV}
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../module5:/var/www/backend
+    networks:
+      - vue-academy
+
+networks:
+  vue-academy:
+    driver: bridge
